@@ -1,0 +1,108 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: MessengerNotifier\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-12 23:30+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.7.1; wp-6.7.2\n"
+"X-Domain: messengernotifier"
+
+#: admin/wizard.php:31
+msgid "Anonymous message"
+msgstr ""
+
+#: admin/settings.php:13
+msgid "Configuration saved and form created successfully!"
+msgstr ""
+
+#: admin/wizard.php:71 admin/settings.php:26
+msgid "Eitaa API Token"
+msgstr ""
+
+#: admin/wizard.php:74 admin/settings.php:30
+msgid "Eitaa Channel ID"
+msgstr ""
+
+#: templates/default.php:32 admin/wizard.php:58
+msgid "Failed to send message. please try again later or contact site admin."
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://mjasia.ir"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://salehweb.ir/messengernotifier"
+msgstr ""
+
+#: templates/default.php:28
+msgid "Message sent successfully."
+msgstr ""
+
+#. Author of the plugin
+msgid "MJasia"
+msgstr ""
+
+#: admin/wizard.php:70
+msgid ""
+"Please follow the instructions on <a href=\"https://eitaayar.ir/admin/api\" "
+"target=\"_blank\">eitaa API documentation</a> to get your API token."
+msgstr ""
+
+#: templates/default.php:14 admin/wizard.php:14
+msgid "Security check failed."
+msgstr ""
+
+#. Description of the plugin
+msgid "Send messages to messenger apps from WordPress (started by eitaa)."
+msgstr ""
+
+#: admin/wizard.php:69
+msgid "Step 1: Eitaa API Information"
+msgstr ""
+
+#: admin/wizard.php:77
+msgid "Step 2: Test Connection"
+msgstr ""
+
+#: templates/default.php:44
+msgid "Submit"
+msgstr ""
+
+#: templates/default.php:39
+msgid "Submit Your Message"
+msgstr ""
+
+#: admin/wizard.php:81
+msgid "Test and Save"
+msgstr ""
+
+#: admin/wizard.php:78
+msgid "Test Message"
+msgstr ""
+
+#. Name of the plugin
+#: messengernotifier.php:61 messengernotifier.php:62
+msgid "MessengerNotifier"
+msgstr ""
+
+#: admin/settings.php:19
+msgid "MessengerNotifier Settings"
+msgstr ""
+
+#: messengernotifier.php:72 messengernotifier.php:73 admin/wizard.php:65
+msgid "MessengerNotifier Setup Wizard"
+msgstr ""
+
+#: templates/default.php:42
+msgid "Your Message"
+msgstr ""

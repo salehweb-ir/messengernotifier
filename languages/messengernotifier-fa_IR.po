@@ -1,0 +1,109 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MessengerNotifier\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-12 23:30+0000\n"
+"PO-Revision-Date: 2025-02-12 23:35+0000\n"
+"Last-Translator: \n"
+"Language-Team: فارسی\n"
+"Language: fa_IR\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.7.1; wp-6.7.2\n"
+"X-Domain: messengernotifier"
+
+#: admin/wizard.php:31
+msgid "Anonymous message"
+msgstr "پیام ناشناس"
+
+#: admin/settings.php:13
+msgid "Configuration saved and form created successfully!"
+msgstr "تنظیمات با موفقیت ذخیره شد و فرم ایجاد شد."
+
+#: admin/wizard.php:71 admin/settings.php:26
+msgid "Eitaa API Token"
+msgstr "توکن API ایتا"
+
+#: admin/wizard.php:74 admin/settings.php:30
+msgid "Eitaa Channel ID"
+msgstr "شناسه کانال ایتا"
+
+#: templates/default.php:32 admin/wizard.php:58
+msgid "Failed to send message. please try again later or contact site admin."
+msgstr "خطا در ارسال پیام. لطفاً بعداً تلاش کنید یا با مدیر سایت تماس بگیرید"
+
+#. Author URI of the plugin
+msgid "https://mjasia.ir"
+msgstr "https://mjasia.ir"
+
+#. URI of the plugin
+msgid "https://salehweb.ir/messengernotifier"
+msgstr "https://salehweb.ir/messengernotifier"
+
+#: templates/default.php:28
+msgid "Message sent successfully."
+msgstr "پیام با موفقیت ارسال شد"
+
+#. Author of the plugin
+msgid "MJasia"
+msgstr "محمد جواد آسیا"
+
+#: admin/wizard.php:70
+msgid ""
+"Please follow the instructions on <a href=\"https://eitaayar.ir/admin/api\" "
+"target=\"_blank\">eitaa API documentation</a> to get your API token."
+msgstr ""
+"لطفا برای دریافت توکن API ایتا <a href=\"https://eitaayar.ir/admin/api\" "
+"target=\"_blank\">مستندات API ایتا</a> را دنبال کنید."
+
+#: templates/default.php:14 admin/wizard.php:14
+msgid "Security check failed."
+msgstr "خطا در بررسی nonce وردپرس"
+
+#. Description of the plugin
+msgid "Send messages to messenger apps from WordPress (started by eitaa)."
+msgstr "ارسال پیام به پیام رسان ها از وردپرس (از ایتا شروع کردیم)"
+
+#: admin/wizard.php:69
+msgid "Step 1: Eitaa API Information"
+msgstr "گام اول: اطلاعات API ایتا"
+
+#: admin/wizard.php:77
+msgid "Step 2: Test Connection"
+msgstr "گام دوم: بررسی اتصال"
+
+#: templates/default.php:44
+msgid "Submit"
+msgstr "ثبت"
+
+#: templates/default.php:39
+msgid "Submit Your Message"
+msgstr "ثبت پیام"
+
+#: admin/wizard.php:81
+msgid "Test and Save"
+msgstr "آزمایش و ذخیره"
+
+#: admin/wizard.php:78
+msgid "Test Message"
+msgstr "پیام آزمایشی"
+
+#. Name of the plugin
+#: messengernotifier.php:61 messengernotifier.php:62
+msgid "MessengerNotifier"
+msgstr "MessengerNotifier"
+
+#: admin/settings.php:19
+msgid "MessengerNotifier Settings"
+msgstr "تنظیمات MessengerNotifier"
+
+#: messengernotifier.php:72 messengernotifier.php:73 admin/wizard.php:65
+msgid "MessengerNotifier Setup Wizard"
+msgstr "صفحه تنظیمات MessengerNotifier"
+
+#: templates/default.php:42
+msgid "Your Message"
+msgstr "پیام شما"
