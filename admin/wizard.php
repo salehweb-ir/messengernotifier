@@ -10,9 +10,10 @@ include_once plugin_dir_path(__FILE__) . '../includes/send-message.php';
 function messengernotifier_display_wizard() {
     if (isset($_POST['submit'])) {
 		
-		if (!isset($_POST['messengernotifier_nonce']) || !wp_verify_nonce(wp_unslash($_POST['messengernotifier_nonce']), 'messengernotifier_nonce_action')) {
-			wp_die(esc_html__('Security check failed.', 'messengernotifier')); // stop form processing if invalid nonce
+		if (!isset($_POST['messengernotifier_nonce']) || !wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['messengernotifier_nonce'])), 'messengernotifier_nonce_action')) {
+			wp_die(esc_html__('Security check failed.', 'messengernotifier'));
 		}
+
         // get form fields
 		$token      = sanitize_text_field(wp_unslash($_POST['token']));
 		$channel_id = sanitize_text_field(wp_unslash($_POST['channel_id']));
@@ -24,12 +25,12 @@ function messengernotifier_display_wizard() {
 
         if ($send_result) {
             // save eitaa info in wp options
-            update_option('token_eitaa_api', $token);
-            update_option('eitaa_channel_id', $channel_id);
+            update_option('messengernotifier_token_eitaa_api', $token);
+            update_option('messengernotifier_eitaa_channel_id', $channel_id);
 
             // create new page contains template shortcode 
             $page_title = __('Anonymous message','messengernotifier');
-            $page_content = '[default_template]'; // use shortcode to display default template form
+            $page_content = '[messengernotifier_default_template]'; // use shortcode to display default template form
 
             // check if page doesn't exist
             $page_check = new WP_Query(array(

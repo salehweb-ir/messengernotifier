@@ -11,14 +11,17 @@ function messengernotifier_display_form() {
     if (isset($_POST['submit'])) {
 		
 		// check nonce before processing form
-    	if (!isset($_POST['messengernotifier_nonce']) || !wp_verify_nonce(wp_unslash($_POST['messengernotifier_nonce']), 'messengernotifier_nonce_action')) {        			wp_die(esc_html__('Security check failed.', 'messengernotifier')); // 
-    	}
+    	if (!isset($_POST['messengernotifier_nonce']) || 
+			!wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['messengernotifier_nonce'])), 'messengernotifier_nonce_action')) {
+			wp_die(esc_html__('Security check failed.', 'messengernotifier'));
+		}
+
         // get message from form
         $message = sanitize_text_field(wp_unslash($_POST['message']));
 
         // get token and ID from options
-        $token = get_option('token_eitaa_api');
-        $channel_id = get_option('eitaa_channel_id');
+        $token = get_option('messengernotifier_token_eitaa_api');
+        $channel_id = get_option('messengernotifier_eitaa_channel_id');
 
         // send message to Eitaa
         $send_result = messengernotifier_send_text_message($token, $channel_id, $message);

@@ -10,6 +10,9 @@ License: GPL2
 Text Domain: messengernotifier
 Domain Path: /languages
 */
+if (!defined('ABSPATH')) {
+    exit; // Exit if accessed directly
+}
 
 // Load plugin textdomain for translations
 function messengernotifier_load_textdomain() {
@@ -30,7 +33,7 @@ function messengernotifier_default_template_shortcode() {
     include plugin_dir_path(__FILE__) . 'templates/default.php';
     return ob_get_clean();
 }
-add_shortcode('default_template', 'messengernotifier_default_template_shortcode');
+add_shortcode('messengernotifier_default_template', 'messengernotifier_default_template_shortcode');
 
 // Redirect to wizard
 function messengernotifier_activation_redirect() {
@@ -85,8 +88,8 @@ function messengernotifier_sanitize_text_field($input) {
 // Register settings
 function messengernotifier_register_settings() {
 	
-	register_setting('messengernotifier_options_group', 'token_eitaa_api', array('sanitize_callback' => 'messengernotifier_sanitize_text_field'));
-	register_setting('messengernotifier_options_group', 'eitaa_channel_id', array('sanitize_callback' => 'messengernotifier_sanitize_text_field'));
+	register_setting('messengernotifier_options_group', 'messengernotifier_token_eitaa_api', array('sanitize_callback' => 'messengernotifier_sanitize_text_field'));
+	register_setting('messengernotifier_options_group', 'messengernotifier_eitaa_channel_id', array('sanitize_callback' => 'messengernotifier_sanitize_text_field'));
 
 }
 add_action('admin_init', 'messengernotifier_register_settings');

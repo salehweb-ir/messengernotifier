@@ -4,8 +4,8 @@ if (!defined('ABSPATH')) {
 }
 
 // Retrieve saved token and channel ID from options
-$token = get_option('token_eitaa_api');
-$channel_id = get_option('eitaa_channel_id');
+$token = get_option('messengernotifier_token_eitaa_api');
+$channel_id = get_option('messengernotifier_eitaa_channel_id');
 
 // Check for success message
 if (isset($_GET['success']) && $_GET['success'] == 'true') {
@@ -24,11 +24,11 @@ if (isset($_GET['success']) && $_GET['success'] == 'true') {
         <table class="messengernotifier form-table">
             <tr valign="top">
                 <th scope="row"><?php esc_html_e('Eitaa API Token', 'messengernotifier'); ?></th>
-                <td><input type="text" name="token_eitaa_api" value="<?php echo esc_attr($token); ?>" readonly /></td>
+                <td><input type="text" name="messengernotifier_token_eitaa_api" value="<?php echo esc_attr($token); ?>" readonly /></td>
             </tr>
             <tr valign="top">
                 <th scope="row"><?php esc_html_e('Eitaa Channel ID', 'messengernotifier'); ?></th>
-                <td><input type="text" name="eitaa_channel_id" value="<?php echo esc_attr($channel_id); ?>" readonly /></td>
+                <td><input type="text" name="messengernotifier_eitaa_channel_id" value="<?php echo esc_attr($channel_id); ?>" readonly /></td>
             </tr>
         </table>
     </form>
