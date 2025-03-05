@@ -50,6 +50,11 @@ function messengernotifier_display_wizard() {
 
 				$page_id = wp_insert_post($page_args);
 			}
+			
+			    // Store Page ID in WordPress settings
+				if ($page_id && !is_wp_error($page_id)) {
+					update_option('messengernotifier_pageid', $page_id);
+				}
 
             // redirect to setting page with success message
             wp_safe_redirect(admin_url('admin.php?page=messengernotifier&success=true'));
