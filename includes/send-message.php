@@ -25,8 +25,10 @@ function messengernotifier_send_text_message($token, $channel_id, $message) {
 
     // check error 
     if (is_wp_error($response)) {
-        error_log('Eitaa API Error: ' . $response->get_error_message());
-        return false;
+        return [
+            'success' => false,
+            'error'   => $response->get_error_message(),
+        ];
     }
 
     // retrieve response code and body from API
@@ -34,8 +36,9 @@ function messengernotifier_send_text_message($token, $channel_id, $message) {
     $response_body = wp_remote_retrieve_body($response);
 
     // set API response log
-    error_log('Eitaa API Response: ' . $response_body);
-
-    return $http_code == 200;
+	return [
+			'success' => $http_code == 200,
+			'error'    => $response_body,
+		];
 }
 ?>

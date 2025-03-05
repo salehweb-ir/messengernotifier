@@ -23,7 +23,7 @@ function messengernotifier_display_wizard() {
         // test connection to messenger
         $send_result = messengernotifier_send_text_message($token, $channel_id, $test_message);
 
-        if ($send_result) {
+        if ($send_result['success']) {
             // save eitaa info in wp options
             update_option('messengernotifier_token_eitaa_api', $token);
             update_option('messengernotifier_eitaa_channel_id', $channel_id);
@@ -56,7 +56,7 @@ function messengernotifier_display_wizard() {
             exit;
         } else {
 			echo '<div class="notice notice-error is-dismissible"><p>';
-			esc_html_e('Failed to send message. please try again later or contact site admin.', 'messengernotifier');
+			esc_html($send_result['error']);
 			echo '</p></div>';
 		}
     }

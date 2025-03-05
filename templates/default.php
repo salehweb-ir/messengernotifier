@@ -26,15 +26,13 @@ function messengernotifier_display_form() {
         // send message to Eitaa
         $send_result = messengernotifier_send_text_message($token, $channel_id, $message);
 
-        if ($send_result) {
+        if ($send_result['success']) {
 			echo '<div class="notice notice-success is-dismissible"><p>';
-			esc_html_e('Message sent successfully.', 'messengernotifier');
-			echo '</p></div>';
         } else {
 			echo '<div class="notice notice-error is-dismissible"><p>';
-			esc_html_e('Failed to send message. please try again later or contact site admin.', 'messengernotifier');
-			echo '</p></div>';
         }
+			esc_html($send_result['error']);
+			echo '</p></div>';
     }
     ?>
 
