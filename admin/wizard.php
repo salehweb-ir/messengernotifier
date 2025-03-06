@@ -2,43 +2,33 @@
 if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly
 }
-
 // Include the send message functions
 include_once plugin_dir_path(__FILE__) . '../includes/send-message.php';
-
 // display wizard
 function messengernotifier_display_wizard() {
     if (isset($_POST['submit'])) {
-		
 		if (!isset($_POST['messengernotifier_nonce']) || !wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['messengernotifier_nonce'])), 'messengernotifier_nonce_action')) {
 			wp_die(esc_html__('Security check failed.', 'messengernotifier'));
 		}
-
         // get form fields
 		$token      = sanitize_text_field(wp_unslash($_POST['token']));
 		$channel_id = sanitize_text_field(wp_unslash($_POST['channel_id']));
 		$test_message = sanitize_text_field(wp_unslash($_POST['test_message']));
-
-
         // test connection to messenger
         $send_result = messengernotifier_send_text_message($token, $channel_id, $test_message);
-
         if ($send_result['success']) {
             // save eitaa info in wp options
             update_option('messengernotifier_token_eitaa_api', $token);
             update_option('messengernotifier_eitaa_channel_id', $channel_id);
-
             // create new page contains template shortcode 
             $page_title = __('Anonymous message','messengernotifier');
             $page_content = '[messengernotifier_default_template]'; // use shortcode to display default template form
-
             // check if page doesn't exist
             $page_check = new WP_Query(array(
 				'post_type'  => 'page',
 				'title'      => $page_title,
 				'fields'     => 'ids', // only page ID returns
 			));
-
 			if (!$page_check->have_posts()) {
 				$page_args = array(
 					'post_type'    => 'page',
@@ -47,15 +37,12 @@ function messengernotifier_display_wizard() {
 					'post_status'  => 'publish',
 					'post_author'  => get_current_user_id(),
 				);
-
 				$page_id = wp_insert_post($page_args);
 			}
-			
 			    // Store Page ID in WordPress settings
 				if ($page_id && !is_wp_error($page_id)) {
 					update_option('messengernotifier_pageid', $page_id);
 				}
-
             // redirect to setting page with success message
             wp_safe_redirect(admin_url('admin.php?page=messengernotifier&success=true'));
             exit;
@@ -73,7 +60,18 @@ function messengernotifier_display_wizard() {
         <form method="post" class="messengernotifier-wizard-form">
 			<?php wp_nonce_field('messengernotifier_nonce_action', 'messengernotifier_nonce'); ?>
             <h2><?php esc_html_e('Step 1: Eitaa API Information', 'messengernotifier'); ?></h2>
-            <p><?php esc_html_e('Please follow the instructions on <a href="https://eitaayar.ir/admin/api" target="_blank">eitaa API documentation</a> to get your API token.', 'messengernotifier'); ?></p>
+			<p>
+				<?php 
+				printf(
+					/* translators: %s: Link to eitaa API documentation */
+					esc_html__('Please follow the instructions on %s to get your API token.', 'messengernotifier'),
+					sprintf(
+						'<a href="https://eitaayar.ir/admin/api" target="_blank">%s</a>',
+						esc_html__('eitaa API documentation', 'messengernotifier')
+					)
+				);
+				?>
+			</p>
             <label for="token"><?php esc_html_e('Eitaa API Token', 'messengernotifier'); ?></label>
             <input type="text" name="token" id="token" required>
 
@@ -90,6 +88,5 @@ function messengernotifier_display_wizard() {
 
     <?php
 }
-
 messengernotifier_display_wizard();
 ?>

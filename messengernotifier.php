@@ -16,7 +16,7 @@ if (!defined('ABSPATH')) {
 
 // Load plugin textdomain for translations
 function messengernotifier_load_textdomain() {
-    load_plugin_textdomain('v', false, basename(dirname(__FILE__)) . '/languages');
+    load_plugin_textdomain('messengernotifier', false, basename(dirname(__FILE__)) . '/languages');
 }
 add_action('init', 'messengernotifier_load_textdomain');
 

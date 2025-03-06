@@ -3,7 +3,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n==0 || n==1);\n"
 "Project-Id-Version: Messenger Notifier\n"
 "POT-Creation-Date: 2025-03-05 21:09+0330\n"
-"PO-Revision-Date: 2025-03-05 21:16+0330\n"
+"PO-Revision-Date: 2025-03-06 14:14+0330\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,7 +23,7 @@ msgstr ""
 
 #: admin/settings.php:14
 msgid "Configuration saved and form created successfully!"
-msgstr "تنظیمات ذخیره شد و فرم با موفقیت ایجاد شد."
+msgstr "تنظیمات ذخیره شد و فرم با موفقیت ایجاد شد!"
 
 #: admin/settings.php:20
 msgid "MessengerNotifier Settings"
@@ -35,15 +35,15 @@ msgstr "توکن API ایتا"
 
 #: admin/settings.php:31 admin/wizard.php:80
 msgid "Eitaa Channel ID"
-msgstr "شناسه کانال ایتا"
+msgstr "آیدی کانال ایتا"
 
 #: admin/settings.php:35
 msgid "Anonymous message page link"
-msgstr "لینک صفحه پیام ناشناس"
+msgstr "لینک برگه پیام ناشناس"
 
 #: admin/wizard.php:14 templates/default.php:16
 msgid "Security check failed."
-msgstr "خطای بررسی امنیتی."
+msgstr "بررسی امنیتی ناموفق بود."
 
 #: admin/wizard.php:32
 msgid "Anonymous message"
@@ -51,19 +51,19 @@ msgstr "پیام ناشناس"
 
 #: admin/wizard.php:71 messengernotifier.php:75 messengernotifier.php:76
 msgid "MessengerNotifier Setup Wizard"
-msgstr "پیکربندی اولیه MessengerNotifier "
+msgstr "راه انداز MessengerNotifier"
 
 #: admin/wizard.php:75
 msgid "Step 1: Eitaa API Information"
-msgstr "مرحله اول: اطلاعات API ایتا"
+msgstr "مرحله 1: اطلاعات API ایتا"
 
 #: admin/wizard.php:76
 msgid ""
 "Please follow the instructions on <a href=\"https://eitaayar.ir/admin/api\" "
 "target=\"_blank\">eitaa API documentation</a> to get your API token."
 msgstr ""
-"لطفاً برای دریافت توکن API ایتا <a href=\"https://eitaayar.ir/admin/api\" "
-"target=\"_blank\">مستندات API ایتا</a> را دنبال کنید."
+"لطفاً دستورالعمل‌های <a href=\"https://eitaayar.ir/admin/api\" target=\"_blank"
+"\">مستندات API eitaa</a> را برای دریافت کد API خود دنبال کنید."
 
 #: admin/wizard.php:83
 msgid "Step 2: Test Connection"
@@ -75,7 +75,7 @@ msgstr "پیام آزمایشی"
 
 #: admin/wizard.php:87
 msgid "Test and Save"
-msgstr "آزمایش و ذخیره"
+msgstr "بررسی و ذخیره"
 
 #: messengernotifier.php:64 messengernotifier.php:65
 msgid "MessengerNotifier"
@@ -83,7 +83,7 @@ msgstr "MessengerNotifier"
 
 #: templates/default.php:40
 msgid "Submit Your Message"
-msgstr "پیام خود را بنویسید"
+msgstr "پیام خود را ارسال کنید"
 
 #: templates/default.php:43
 msgid "Your Message"
@@ -95,7 +95,7 @@ msgstr "ثبت"
 
 #. Plugin Name of the plugin/theme
 msgid "Messenger Notifier"
-msgstr "Messenger Notifier "
+msgstr "Messenger Notifier"
 
 #. Plugin URI of the plugin/theme
 msgid "https://salehweb.ir/messengernotifier"
@@ -103,7 +103,7 @@ msgstr "https://salehweb.ir/messengernotifier"
 
 #. Description of the plugin/theme
 msgid "Send message to messenger apps from WordPress (started by eitaa)."
-msgstr "ارسال پیام به پیام رسان ها (با ایتا شروع شده)"
+msgstr "ارسال پیام به اپلیکیشن های پیام رسان (با ایتا شروع شده)."
 
 #. Author of the plugin/theme
 msgid "salehweb"
