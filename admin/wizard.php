@@ -14,8 +14,9 @@ function messengernotifier_display_wizard() {
 		$token      = sanitize_text_field(wp_unslash($_POST['token']));
 		$channel_id = sanitize_text_field(wp_unslash($_POST['channel_id']));
 		$test_message = sanitize_text_field(wp_unslash($_POST['test_message']));
+		$hashtag = __('#Test','messengernotifier');
         // test connection to messenger
-        $send_result = messengernotifier_send_text_message($token, $channel_id, $test_message);
+        $send_result = messengernotifier_send_text_message($token, $channel_id, $test_message, $hashtag);
         if ($send_result['success']) {
             // save eitaa info in wp options
             update_option('messengernotifier_token_eitaa_api', $token);
@@ -28,6 +29,7 @@ function messengernotifier_display_wizard() {
 				'post_type'  => 'page',
 				'title'      => $page_title,
 				'fields'     => 'ids', // only page ID returns
+				'post_status'  => 'publish',
 			));
 			if (!$page_check->have_posts()) {
 				$page_args = array(
@@ -43,6 +45,7 @@ function messengernotifier_display_wizard() {
 				if ($page_id && !is_wp_error($page_id)) {
 					update_option('messengernotifier_pageid', $page_id);
 				}
+			
             // redirect to setting page with success message
             wp_safe_redirect(admin_url('admin.php?page=messengernotifier&success=true'));
             exit;

@@ -22,9 +22,10 @@ function messengernotifier_display_form() {
         // get token and ID from options
         $token = get_option('messengernotifier_token_eitaa_api');
         $channel_id = get_option('messengernotifier_eitaa_channel_id');
+		$hashtag = __('#Message','messengernotifier');
 
         // send message to Eitaa
-        $send_result = messengernotifier_send_text_message($token, $channel_id, $message);
+        $send_result = messengernotifier_send_text_message($token, $channel_id, $message ,$hashtag);
 
         if ($send_result['success']) {
 			echo '<div class="notice notice-success is-dismissible"><p>';
