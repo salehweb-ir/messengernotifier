@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Messenger Notifier\n"
-"POT-Creation-Date: 2025-03-24 17:51+0430\n"
+"POT-Creation-Date: 2025-04-01 18:13+0430\n"
 "PO-Revision-Date: 2025-03-05 21:08+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -57,7 +57,7 @@ msgstr ""
 msgid "#Test"
 msgstr ""
 
-#: admin/wizard.php:63 messengernotifier.php:75 messengernotifier.php:76
+#: admin/wizard.php:63 messengernotifier.php:79 messengernotifier.php:80
 msgid "MessengerNotifier Setup Wizard"
 msgstr ""
 
@@ -101,35 +101,35 @@ msgstr ""
 msgid "Test and Save"
 msgstr ""
 
-#: includes/woocommerce.php:9
+#: includes/woocommerce.php:15
 msgid "#new_order"
 msgstr ""
 
-#: includes/woocommerce.php:20
+#: includes/woocommerce.php:24
 msgid "New order received!"
 msgstr ""
 
-#: includes/woocommerce.php:21
+#: includes/woocommerce.php:25
 msgid "Order ID:"
 msgstr ""
 
-#: includes/woocommerce.php:22
+#: includes/woocommerce.php:26
 msgid "Customer:"
 msgstr ""
 
-#: includes/woocommerce.php:29
+#: includes/woocommerce.php:33
 msgid "Total amount:"
 msgstr ""
 
-#: includes/woocommerce.php:30
+#: includes/woocommerce.php:34
 msgid "Order status:"
 msgstr ""
 
-#: includes/woocommerce.php:31
+#: includes/woocommerce.php:35
 msgid "Order Link:"
 msgstr ""
 
-#: messengernotifier.php:64 messengernotifier.php:65
+#: messengernotifier.php:68 messengernotifier.php:69
 msgid "MessengerNotifier"
 msgstr ""
 

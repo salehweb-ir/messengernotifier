@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Messenger Notifier\n"
-"POT-Creation-Date: 2025-03-24 17:49+0430\n"
-"PO-Revision-Date: 2025-03-24 17:51+0430\n"
+"POT-Creation-Date: 2025-04-01 18:13+0430\n"
+"PO-Revision-Date: 2025-04-01 18:13+0430\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -57,7 +57,7 @@ msgstr "بررسی امنیتی ناموفق بود."
 msgid "#Test"
 msgstr "#تست"
 
-#: admin/wizard.php:63 messengernotifier.php:75 messengernotifier.php:76
+#: admin/wizard.php:63 messengernotifier.php:79 messengernotifier.php:80
 msgid "MessengerNotifier Setup Wizard"
 msgstr "راه انداز MessengerNotifier"
 
@@ -103,35 +103,35 @@ msgstr "پیام آزمایشی"
 msgid "Test and Save"
 msgstr "بررسی و ذخیره"
 
-#: includes/woocommerce.php:9
+#: includes/woocommerce.php:15
 msgid "#new_order"
 msgstr "#سفارش_جدید"
 
-#: includes/woocommerce.php:20
+#: includes/woocommerce.php:24
 msgid "New order received!"
 msgstr "سفارش جدید دریافت شد!"
 
-#: includes/woocommerce.php:21
+#: includes/woocommerce.php:25
 msgid "Order ID:"
 msgstr "شناسه سفارش:"
 
-#: includes/woocommerce.php:22
+#: includes/woocommerce.php:26
 msgid "Customer:"
 msgstr "نام مشتری:"
 
-#: includes/woocommerce.php:29
+#: includes/woocommerce.php:33
 msgid "Total amount:"
 msgstr "قیمت کل:"
 
-#: includes/woocommerce.php:30
+#: includes/woocommerce.php:34
 msgid "Order status:"
 msgstr "وضعیت سفارش:"
 
-#: includes/woocommerce.php:31
+#: includes/woocommerce.php:35
 msgid "Order Link:"
 msgstr "پیوند به سفارش:"
 
-#: messengernotifier.php:64 messengernotifier.php:65
+#: messengernotifier.php:68 messengernotifier.php:69
 msgid "MessengerNotifier"
 msgstr "MessengerNotifier"
 
