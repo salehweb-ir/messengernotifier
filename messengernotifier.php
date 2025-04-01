@@ -3,7 +3,11 @@
 Plugin Name: Messenger Notifier
 Plugin URI: https://salehweb.ir/messengernotifier
 Description: Send message to messenger apps from WordPress (started by eitaa).
+<<<<<<< HEAD
 Version: 1.1
+=======
+Version: 1.0
+>>>>>>> 459249df94d1244cca6cd6f47b3414ffaa3374fe
 Author: salehweb
 Author URI: https://salehweb.ir
 License: GPL3

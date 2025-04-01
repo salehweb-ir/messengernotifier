@@ -8,6 +8,10 @@ function messengernotifier_send_order_to_eitaa( $order_id ) {
 	$channel_id = get_option('messengernotifier_eitaa_channel_id');
 	
 	$order = wc_get_order( $order_id );
+    $token = get_option('messengernotifier_token_eitaa_api');
+    $channel_id = get_option('messengernotifier_eitaa_channel_id');
+
+    $order = wc_get_order( $order_id );
 	$messengernotifier_hashtag = __('#new_order','messengernotifier');
 
 	if ( ! $order ) {
@@ -31,5 +35,7 @@ function messengernotifier_send_order_to_eitaa( $order_id ) {
     $message .= "🔗 " . __( 'Order Link:', 'messengernotifier' ) . " {$order_link}\n";
 	
     messengernotifier_send_text_message( $token, $channel_id, $order, $messengernotifier_hashtag);
+=======
+    messengernotifier_send_text_message( $token, $channel_id, $message, $messengernotifier_hashtag);
 }
 ?>
