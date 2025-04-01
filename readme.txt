@@ -2,13 +2,8 @@
 Contributors: salehweb
 Tags: messenger, messaging, anonymous message, eitaa messenger
 Tested up to: 6.7
-<<<<<<< HEAD
 Stable tag: 1.1
 License: GPLv3
-=======
-Stable tag: 1.0
-License: GPLv2
->>>>>>> 459249df94d1244cca6cd6f47b3414ffaa3374fe
 
 Receive messages anonymously from your contacts to messenger apps
 

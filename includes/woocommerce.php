@@ -1,4 +1,8 @@
 <?php
+if (!defined('ABSPATH')) {
+    exit; // Exit if accessed directly
+}
+
 add_action( 'woocommerce_payment_complete', 'messengernotifier_send_order_to_eitaa' );
 
 function messengernotifier_send_order_to_eitaa( $order_id ) {
@@ -34,8 +38,6 @@ function messengernotifier_send_order_to_eitaa( $order_id ) {
     $message .= "📌 " . __( 'Order status:', 'messengernotifier' ) . " {$order_status}\n";
     $message .= "🔗 " . __( 'Order Link:', 'messengernotifier' ) . " {$order_link}\n";
 	
-    messengernotifier_send_text_message( $token, $channel_id, $order, $messengernotifier_hashtag);
-=======
     messengernotifier_send_text_message( $token, $channel_id, $message, $messengernotifier_hashtag);
 }
 ?>
