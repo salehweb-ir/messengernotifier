@@ -2,7 +2,7 @@
 Contributors: salehweb
 Tags: messenger, messaging, anonymous message, eitaa messenger
 Tested up to: 6.7
-Stable tag: 0.1
+Stable tag: 1.0
 License: GPLv2
 
 Receive messages anonymously from your contacts to messenger apps
@@ -37,3 +37,14 @@ You need to use Numerical ID. See screenshot 1
 
 == Screenshots ==
 1. Use Numerical channel ID in eitaa
+
+== Changelog ==
+= 0.1 =
+* Initial release.
+* Just creates a new page with a simple form for sending messages to Eitaa.
+
+= 0.2 =
+* Add - Added page title and slug in plugin settings.
+
+= 1.0 =
+* Add - Woocommerce support added. Now you can notify when new order recieved from woocommerce. 🛒
