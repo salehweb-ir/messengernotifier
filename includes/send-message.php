@@ -3,9 +3,14 @@ if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly
 }
 
-// send text message to eitaa
+/* send text message to eitaa
+ * token = Eitaa API token
+ * channel_id = numeral channel idate
+ * message = message sent to Eitaa
+ * hashtag = sent message type (test, message, order)
+ */
 function messengernotifier_send_text_message($token, $channel_id, $message, $hashtag) {
-    $url = "https://eitaayar.ir/api/".$token."/sendMessage";
+	$url = "https://eitaayar.ir/api/".$token."/sendMessage";
 
     $post_fields = array(
         'chat_id' => $channel_id,

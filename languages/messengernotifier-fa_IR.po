@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Messenger Notifier\n"
-"POT-Creation-Date: 2025-03-10 20:45+0330\n"
-"PO-Revision-Date: 2025-03-10 20:46+0330\n"
+"POT-Creation-Date: 2025-03-24 17:49+0430\n"
+"PO-Revision-Date: 2025-03-24 17:51+0430\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -16,8 +16,8 @@ msgstr ""
 "X-Poedit-WPHeader: messengernotifier.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
-"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
@@ -29,11 +29,11 @@ msgstr "تنظیمات ذخیره شد و فرم با موفقیت ایجاد ش
 msgid "MessengerNotifier Settings"
 msgstr "تنظیمات MessengerNotifier"
 
-#: admin/settings.php:28 admin/wizard.php:78
+#: admin/settings.php:28 admin/wizard.php:80
 msgid "Eitaa API Token"
 msgstr "توکن API ایتا"
 
-#: admin/settings.php:32 admin/wizard.php:81
+#: admin/settings.php:32 admin/wizard.php:83
 msgid "Eitaa Channel ID"
 msgstr "آیدی کانال ایتا"
 
@@ -53,43 +53,83 @@ msgstr "برگه پیدا نشد!"
 msgid "Security check failed."
 msgstr "بررسی امنیتی ناموفق بود."
 
-#: admin/wizard.php:17
+#: admin/wizard.php:19
 msgid "#Test"
 msgstr "#تست"
 
-#: admin/wizard.php:25
-msgid "Anonymous message"
-msgstr "پیام ناشناس"
-
-#: admin/wizard.php:61 messengernotifier.php:75 messengernotifier.php:76
+#: admin/wizard.php:63 messengernotifier.php:75 messengernotifier.php:76
 msgid "MessengerNotifier Setup Wizard"
 msgstr "راه انداز MessengerNotifier"
 
-#: admin/wizard.php:65
+#: admin/wizard.php:67
 msgid "Step 1: Eitaa API Information"
 msgstr "مرحله 1: اطلاعات API ایتا"
 
 #. translators: %s: Link to eitaa API documentation
-#: admin/wizard.php:70
+#: admin/wizard.php:72
 #, php-format
 msgid "Please follow the instructions on %s to get your API token."
 msgstr "لطفاً برای دریافت توکن API ایتا دستورالعمل های %s را دنبال کنید"
 
-#: admin/wizard.php:73
+#: admin/wizard.php:75
 msgid "eitaa API documentation"
 msgstr "مستندات API ایتا"
 
-#: admin/wizard.php:84
+#: admin/wizard.php:86
+msgid "Anonymous message page title"
+msgstr "عنوان برگه پیام ناشناس"
+
+#: admin/wizard.php:89
+msgid "Anonymous message page slug"
+msgstr "لینک برگه پیام ناشناس"
+
+#: admin/wizard.php:91
+msgid ""
+"It is recommended to use Latin words for better readability of the anonymous "
+"message link when sharing."
+msgstr ""
+"برای خوانایی بهتر پیوند پیام ناشناس هنگام اشتراک گذاری توصیه می شود از کلمات "
+"لاتین استفاده کنید."
+
+#: admin/wizard.php:93
 msgid "Step 2: Test Connection"
 msgstr "مرحله 2: بررسی اتصال"
 
-#: admin/wizard.php:85
+#: admin/wizard.php:94
 msgid "Test Message"
 msgstr "پیام آزمایشی"
 
-#: admin/wizard.php:88
+#: admin/wizard.php:97
 msgid "Test and Save"
 msgstr "بررسی و ذخیره"
+
+#: includes/woocommerce.php:9
+msgid "#new_order"
+msgstr "#سفارش_جدید"
+
+#: includes/woocommerce.php:20
+msgid "New order received!"
+msgstr "سفارش جدید دریافت شد!"
+
+#: includes/woocommerce.php:21
+msgid "Order ID:"
+msgstr "شناسه سفارش:"
+
+#: includes/woocommerce.php:22
+msgid "Customer:"
+msgstr "نام مشتری:"
+
+#: includes/woocommerce.php:29
+msgid "Total amount:"
+msgstr "قیمت کل:"
+
+#: includes/woocommerce.php:30
+msgid "Order status:"
+msgstr "وضعیت سفارش:"
+
+#: includes/woocommerce.php:31
+msgid "Order Link:"
+msgstr "پیوند به سفارش:"
 
 #: messengernotifier.php:64 messengernotifier.php:65
 msgid "MessengerNotifier"
@@ -130,6 +170,9 @@ msgstr "صالح وب"
 #. Author URI of the plugin/theme
 msgid "https://salehweb.ir"
 msgstr "https://salehweb.ir"
+
+#~ msgid "Anonymous message"
+#~ msgstr "پیام ناشناس"
 
 #~ msgid ""
 #~ "Please follow the instructions on <a href=\"https://eitaayar.ir/admin/api"

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Messenger Notifier\n"
-"POT-Creation-Date: 2025-03-05 21:09+0330\n"
+"POT-Creation-Date: 2025-03-24 17:51+0430\n"
 "PO-Revision-Date: 2025-03-05 21:08+0330\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -16,78 +16,136 @@ msgstr ""
 "X-Poedit-WPHeader: messengernotifier.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
-"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: admin/settings.php:14
+#: admin/settings.php:15
 msgid "Configuration saved and form created successfully!"
 msgstr ""
 
-#: admin/settings.php:20
+#: admin/settings.php:21
 msgid "MessengerNotifier Settings"
 msgstr ""
 
-#: admin/settings.php:27 admin/wizard.php:77
+#: admin/settings.php:28 admin/wizard.php:80
 msgid "Eitaa API Token"
 msgstr ""
 
-#: admin/settings.php:31 admin/wizard.php:80
+#: admin/settings.php:32 admin/wizard.php:83
 msgid "Eitaa Channel ID"
 msgstr ""
 
-#: admin/settings.php:35
+#: admin/settings.php:36
 msgid "Anonymous message page link"
 msgstr ""
 
-#: admin/wizard.php:14 templates/default.php:16
+#: admin/settings.php:40
+msgid "View Page"
+msgstr ""
+
+#: admin/settings.php:42
+msgid "Page not found!"
+msgstr ""
+
+#: admin/wizard.php:11 templates/default.php:16
 msgid "Security check failed."
 msgstr ""
 
-#: admin/wizard.php:32
-msgid "Anonymous message"
+#: admin/wizard.php:19
+msgid "#Test"
 msgstr ""
 
-#: admin/wizard.php:71 messengernotifier.php:75 messengernotifier.php:76
+#: admin/wizard.php:63 messengernotifier.php:75 messengernotifier.php:76
 msgid "MessengerNotifier Setup Wizard"
 msgstr ""
 
-#: admin/wizard.php:75
+#: admin/wizard.php:67
 msgid "Step 1: Eitaa API Information"
 msgstr ""
 
-#: admin/wizard.php:76
-msgid ""
-"Please follow the instructions on <a href=\"https://eitaayar.ir/admin/api\" "
-"target=\"_blank\">eitaa API documentation</a> to get your API token."
+#. translators: %s: Link to eitaa API documentation
+#: admin/wizard.php:72
+#, php-format
+msgid "Please follow the instructions on %s to get your API token."
 msgstr ""
 
-#: admin/wizard.php:83
+#: admin/wizard.php:75
+msgid "eitaa API documentation"
+msgstr ""
+
+#: admin/wizard.php:86
+msgid "Anonymous message page title"
+msgstr ""
+
+#: admin/wizard.php:89
+msgid "Anonymous message page slug"
+msgstr ""
+
+#: admin/wizard.php:91
+msgid ""
+"It is recommended to use Latin words for better readability of the "
+"anonymous message link when sharing."
+msgstr ""
+
+#: admin/wizard.php:93
 msgid "Step 2: Test Connection"
 msgstr ""
 
-#: admin/wizard.php:84
+#: admin/wizard.php:94
 msgid "Test Message"
 msgstr ""
 
-#: admin/wizard.php:87
+#: admin/wizard.php:97
 msgid "Test and Save"
+msgstr ""
+
+#: includes/woocommerce.php:9
+msgid "#new_order"
+msgstr ""
+
+#: includes/woocommerce.php:20
+msgid "New order received!"
+msgstr ""
+
+#: includes/woocommerce.php:21
+msgid "Order ID:"
+msgstr ""
+
+#: includes/woocommerce.php:22
+msgid "Customer:"
+msgstr ""
+
+#: includes/woocommerce.php:29
+msgid "Total amount:"
+msgstr ""
+
+#: includes/woocommerce.php:30
+msgid "Order status:"
+msgstr ""
+
+#: includes/woocommerce.php:31
+msgid "Order Link:"
 msgstr ""
 
 #: messengernotifier.php:64 messengernotifier.php:65
 msgid "MessengerNotifier"
 msgstr ""
 
-#: templates/default.php:40
+#: templates/default.php:25
+msgid "#Message"
+msgstr ""
+
+#: templates/default.php:41
 msgid "Submit Your Message"
 msgstr ""
 
-#: templates/default.php:43
+#: templates/default.php:44
 msgid "Your Message"
 msgstr ""
 
-#: templates/default.php:45
+#: templates/default.php:46
 msgid "Submit"
 msgstr ""
 

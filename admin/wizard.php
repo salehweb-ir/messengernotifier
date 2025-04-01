@@ -14,6 +14,8 @@ function messengernotifier_display_wizard() {
 		$token      = sanitize_text_field(wp_unslash($_POST['token']));
 		$channel_id = sanitize_text_field(wp_unslash($_POST['channel_id']));
 		$test_message = sanitize_text_field(wp_unslash($_POST['test_message']));
+		$page_title = sanitize_text_field(wp_unslash($_POST['page_title']));
+		$page_slug = sanitize_text_field(wp_unslash($_POST['page_slug']));
 		$hashtag = __('#Test','messengernotifier');
         // test connection to messenger
         $send_result = messengernotifier_send_text_message($token, $channel_id, $test_message, $hashtag);
@@ -22,7 +24,6 @@ function messengernotifier_display_wizard() {
             update_option('messengernotifier_token_eitaa_api', $token);
             update_option('messengernotifier_eitaa_channel_id', $channel_id);
             // create new page contains template shortcode 
-            $page_title = __('Anonymous message','messengernotifier');
             $page_content = '[messengernotifier_default_template]'; // use shortcode to display default template form
             // check if page doesn't exist
             $page_check = new WP_Query(array(
@@ -33,11 +34,12 @@ function messengernotifier_display_wizard() {
 			));
 			if (!$page_check->have_posts()) {
 				$page_args = array(
-					'post_type'    => 'page',
-					'post_title'   => $page_title,
-					'post_content' => $page_content,
-					'post_status'  => 'publish',
-					'post_author'  => get_current_user_id(),
+					'post_type'		=> 'page',
+					'post_title'	=> $page_title,
+					'post_name'		=> $page_slug,
+					'post_content'	=> $page_content,
+					'post_status'	=> 'publish',
+					'post_author'	=> get_current_user_id(),
 				);
 				$page_id = wp_insert_post($page_args);
 			}
@@ -80,6 +82,13 @@ function messengernotifier_display_wizard() {
 
             <label for="channel_id"><?php esc_html_e('Eitaa Channel ID', 'messengernotifier'); ?></label>
             <input type="text" name="channel_id" id="channel_id" required>
+
+            <label for="page_title"><?php esc_html_e('Anonymous message page title', 'messengernotifier'); ?></label>
+            <input type="text" name="page_title" id="page_title" required>
+
+            <label for="page_slug"><?php esc_html_e('Anonymous message page slug', 'messengernotifier'); ?></label>
+            <input type="text" name="page_slug" id="page_slug" required>
+			<span><?php esc_html_e('It is recommended to use Latin words for better readability of the anonymous message link when sharing.'); ?></span>
 
             <h2><?php esc_html_e('Step 2: Test Connection', 'messengernotifier'); ?></h2>
             <label for="test_message"><?php esc_html_e('Test Message', 'messengernotifier'); ?></label>
