@@ -2,6 +2,10 @@
 add_action('comment_post', 'messengernotifier_new_comment' , 10, 2);
 
 function messengernotifier_new_comment($comment_ID, $comment_approved) {
+
+// get token and ID from options
+	$token = get_option('messengernotifier_token_eitaa_api');
+	$channel_id = get_option('messengernotifier_eitaa_channel_id');
     $comment = get_comment($comment_ID);
     $post = get_post($comment->comment_post_ID);
 
