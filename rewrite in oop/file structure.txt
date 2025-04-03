@@ -1,0 +1,18 @@
+messengernotifier/  
+│── assets/                     # Static assets (CSS, JS, images)  
+│── includes/                   # Core functionality  
+│   │── api/                    # API handlers  
+│   │   │── bale.php            # Handles Bale API requests  
+│   │   │── eitaa.php           # Handles Eitaa API requests  
+│   │   │── soroush.php         # Handles Soroush API requests  
+│   │── hooks/                  # Hook handlers folder  
+│   │   │── comment.php         # Handles comment-related hooks  
+│   │   │── order.php           # Handles WooCommerce order-related hooks  
+│   │   │── user.php            # Handles user-related hooks  
+│   │── load.php                # Main plugin class (initializes everything)  
+│   │── message.php             # Generates messages before sending to APIs  
+│   │── settings.php            # Admin settings class (API configuration page)  
+│── languages/                  # Translation files (.mo, .po)  
+│── messengernotifier.php       # Main plugin file (bootstrapper)  
+│── readme.txt                  # Plugin documentation  
+│── uninstall.php               # Cleanup script (deletes options on uninstall)  
