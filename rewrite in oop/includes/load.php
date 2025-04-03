@@ -22,32 +22,54 @@ class MessengerNotifier {
 
     public function conditionally_load_hooks() {
         // Load hooks only when their related events occur
-        add_action('user_register', function () {
-            require_once plugin_dir_path(__FILE__) . 'hooks/user.php';
+        add_action('user_register', [$this, 'handle_user_registration']);
+        add_action('woocommerce_order_status_completed', [$this, 'handle_order_completion']);
+        add_action('comment_post', [$this, 'handle_comment_post']);
+
+        // Conditionally load API classes
+        $this->load_api_classes();
+    }
+
+    /** Hook Handlers **/
+    public function handle_user_registration() {
+        $file = plugin_dir_path(__FILE__) . 'hooks/user.php';
+        if (file_exists($file)) {
+            require_once $file;
             new \MessengerNotifier\Hooks\UserHooks();
-        });
+        }
+    }
 
-        add_action('woocommerce_order_status_completed', function () {
-            require_once plugin_dir_path(__FILE__) . 'hooks/order.php';
+    public function handle_order_completion() {
+        $file = plugin_dir_path(__FILE__) . 'hooks/order.php';
+        if (file_exists($file)) {
+            require_once $file;
             new \MessengerNotifier\Hooks\OrderHooks();
-        });
+        }
+    }
 
-        add_action('comment_post', function () {
-            require_once plugin_dir_path(__FILE__) . 'hooks/comment.php';
+    public function handle_comment_post() {
+        $file = plugin_dir_path(__FILE__) . 'hooks/comment.php';
+        if (file_exists($file)) {
+            require_once $file;
             new \MessengerNotifier\Hooks\CommentHooks();
-        });
-
-        // Load API classes only if enabled in settings
-        if (get_option('messengernotifier_enable_eitaa') === 'yes') {
-            require_once plugin_dir_path(__FILE__) . 'api/eitaa.php';
         }
+    }
 
-        if (get_option('messengernotifier_enable_bale') === 'yes') {
-            require_once plugin_dir_path(__FILE__) . 'api/bale.php';
-        }
+    /** Load API classes only if enabled **/
+    private function load_api_classes() {
+        $apis = [
+            'eitaa'   => 'messengernotifier_eitaa_enabled',
+            'bale'    => 'messengernotifier_bale_enabled',
+            'soroush' => 'messengernotifier_soroush_enabled',
+        ];
 
-        if (get_option('messengernotifier_enable_soroush') === 'yes') {
-            require_once plugin_dir_path(__FILE__) . 'api/soroush.php';
+        foreach ($apis as $api => $option_name) {
+            if (get_option($option_name) === 'yes') {
+                $file = plugin_dir_path(__FILE__) . "api/{$api}.php";
+                if (file_exists($file)) {
+                    require_once $file;
+                }
+            }
         }
     }
 }
