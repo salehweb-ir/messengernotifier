@@ -29,3 +29,8 @@ register_activation_hook(__FILE__, 'messengernotifier_activate');
 add_action('plugins_loaded', function () {
     MessengerNotifier\MessengerNotifier::get_instance();
 });
+
+function messengernotifier_load_textdomain() {
+    load_plugin_textdomain('messengernotifier', false, dirname(plugin_basename(__FILE__)) . '/languages');
+}
+add_action('plugins_loaded', 'messengernotifier_load_textdomain');

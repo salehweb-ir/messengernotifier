@@ -1,0 +1,37 @@
+.nav-tab-wrapper {
+    margin-bottom: 20px;
+}
+.nav-tab {
+    padding: 10px 15px;
+    font-size: 15px;
+    background: #f1f1f1;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    text-decoration: none;
+}
+.nav-tab-active {
+    background: #fff;
+    border-bottom: 1px solid #fff;
+}
+.tab-content {
+    border: 1px solid #ccc;
+    padding: 20px;
+    background: #fff;
+    display: none;
+}
+.tab-content.active {
+    display: block;
+}
+#settings-notice {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 4px;
+}
+#settings-notice.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+#settings-notice.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
