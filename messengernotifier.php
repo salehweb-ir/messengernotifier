@@ -109,9 +109,6 @@ require_once plugin_dir_path( __FILE__ ) . 'includes/send-message.php';
 // * Add comment support
 require_once plugin_dir_path( __FILE__ ) . 'includes/comment.php';
 
-// * Add comment support
-require_once plugin_dir_path( __FILE__ ) . 'includes/new-user.php';
-
 // * Check if WooCommerce is activated add WooCommerce support
 
 add_action('plugins_loaded', 'is_woocommerce_activated');

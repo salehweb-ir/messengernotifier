@@ -10,7 +10,7 @@ if (!defined('ABSPATH')) {
  * hashtag = sent message type (test, message, order)
  */
 function messengernotifier_send_text_message($token, $channel_id, $message, $hashtag) {
-	$url = "https://eitaayar.ir/api/".$token."/sendMessage";
+    $url = "https://eitaayar.ir/api/".$token."/sendMessage";
 
     $post_fields = array(
         'chat_id' => $channel_id,

@@ -1,17 +1,7 @@
 <?php
-if (!defined('ABSPATH')) {
-    exit; // Exit if accessed directly
-}
-
 add_action( 'woocommerce_payment_complete', 'messengernotifier_send_order_to_eitaa' );
 
 function messengernotifier_send_order_to_eitaa( $order_id ) {
-    
-    // get token and ID from options
-	$token = get_option('messengernotifier_token_eitaa_api');
-	$channel_id = get_option('messengernotifier_eitaa_channel_id');
-	
-	$order = wc_get_order( $order_id );
     $token = get_option('messengernotifier_token_eitaa_api');
     $channel_id = get_option('messengernotifier_eitaa_channel_id');
 

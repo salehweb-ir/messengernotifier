@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Messenger Notifier\n"
-"POT-Creation-Date: 2025-04-01 18:13+0430\n"
-"PO-Revision-Date: 2025-04-01 18:13+0430\n"
+"POT-Creation-Date: 2025-04-02 22:01+0430\n"
+"PO-Revision-Date: 2025-04-02 22:06+0430\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fa_IR\n"
@@ -57,7 +57,7 @@ msgstr "بررسی امنیتی ناموفق بود."
 msgid "#Test"
 msgstr "#تست"
 
-#: admin/wizard.php:63 messengernotifier.php:79 messengernotifier.php:80
+#: admin/wizard.php:63 messengernotifier.php:75 messengernotifier.php:76
 msgid "MessengerNotifier Setup Wizard"
 msgstr "راه انداز MessengerNotifier"
 
@@ -103,35 +103,102 @@ msgstr "پیام آزمایشی"
 msgid "Test and Save"
 msgstr "بررسی و ذخیره"
 
-#: includes/woocommerce.php:15
+#: includes/comment.php:14
+msgid "Approved"
+msgstr "تأیید شد"
+
+#: includes/comment.php:15
+msgid "Pending Moderation"
+msgstr "در انتظار تأیید"
+
+#: includes/comment.php:16
+msgid "Marked as Spam"
+msgstr "علامت به عنوان هرزنامه"
+
+#: includes/comment.php:20
+msgid "Unknown Status"
+msgstr "وضعیت نامشخص"
+
+#: includes/comment.php:23
+#, php-format
+msgid "New Comment on: %s"
+msgstr "دیدگاه جدید در: %s "
+
+#: includes/comment.php:24
+msgid "A new comment has been posted on your site."
+msgstr "دیدگاه جدید در سایت شما ثبت شد."
+
+#: includes/comment.php:25
+#, php-format
+msgid "Author: %s"
+msgstr "نویسنده: %s"
+
+#: includes/comment.php:26
+#, php-format
+msgid "Status: %s"
+msgstr "وضعیت: %s"
+
+#: includes/comment.php:27
+msgid "Comment:"
+msgstr "دیدگاه:"
+
+#: includes/comment.php:28
+#, php-format
+msgid "View Comment: %s"
+msgstr "مشاهده دیدگاه: %s"
+
+#: includes/comment.php:32
+msgid "This comment is awaiting moderation."
+msgstr "این دیدگاه در انتظار تأیید است."
+
+#: includes/comment.php:33
+#, php-format
+msgid "Approve: %s"
+msgstr "تآیید: %s"
+
+#: includes/comment.php:34
+#, php-format
+msgid "Mark as Spam: %s"
+msgstr "علامت به عنوان هرزنامه: %s"
+
+#: includes/comment.php:35
+#, php-format
+msgid "Trash: %s"
+msgstr "حذف: %s"
+
+#: includes/comment.php:38
+msgid "#comment"
+msgstr "#دیدگاه"
+
+#: includes/woocommerce.php:9
 msgid "#new_order"
 msgstr "#سفارش_جدید"
 
-#: includes/woocommerce.php:24
+#: includes/woocommerce.php:18
 msgid "New order received!"
 msgstr "سفارش جدید دریافت شد!"
 
-#: includes/woocommerce.php:25
+#: includes/woocommerce.php:19
 msgid "Order ID:"
 msgstr "شناسه سفارش:"
 
-#: includes/woocommerce.php:26
+#: includes/woocommerce.php:20
 msgid "Customer:"
 msgstr "نام مشتری:"
 
-#: includes/woocommerce.php:33
+#: includes/woocommerce.php:27
 msgid "Total amount:"
 msgstr "قیمت کل:"
 
-#: includes/woocommerce.php:34
+#: includes/woocommerce.php:28
 msgid "Order status:"
 msgstr "وضعیت سفارش:"
 
-#: includes/woocommerce.php:35
+#: includes/woocommerce.php:29
 msgid "Order Link:"
 msgstr "پیوند به سفارش:"
 
-#: messengernotifier.php:68 messengernotifier.php:69
+#: messengernotifier.php:64 messengernotifier.php:65
 msgid "MessengerNotifier"
 msgstr "MessengerNotifier"
 
