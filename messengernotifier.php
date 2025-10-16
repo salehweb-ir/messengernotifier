@@ -14,6 +14,10 @@ if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly
 }
 
+define( 'MNI_FREE_VERSION', '1.1' );
+define( 'MNI_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
+define( 'MNI_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
+
 // Load plugin textdomain for translations
 function messengernotifier_load_textdomain() {
     load_plugin_textdomain('messengernotifier', false, basename(dirname(__FILE__)) . '/languages');
